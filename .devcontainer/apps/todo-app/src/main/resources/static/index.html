@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>📋 Todo App 🐞</title>
+    <title>📋 TODOS App 🐞</title>
     <link href="css/style.css" rel="stylesheet">
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/vue.js"></script>
@@ -13,8 +13,9 @@
     <div id="app">
         <section class="todoapp">
             <header class="header">
-                <h1>todos</h1>
-                <input class="new-todo" v-model="newTodoTitle" v-on:keypress="onAddTodoPressed" autofocus="" placeholder="What needs to be done?">
+<!--                 <h1>Tailored Outreach & Data-driven Opportunity System (TODOS)</h1> -->
+                <img src="../images/todos-icon.png" />
+                <input class="new-todo" v-model="newTodoTitle" v-on:keypress="onAddTodoPressed" autofocus="" placeholder="Who should we reach out to?">
             </header>
             <section class="main">
                 <input class="toggle-all" type="checkbox">
@@ -25,7 +26,7 @@
                 </ul>
             </section>
             <footer class="footer">
-                <span class="todo-count">{{filteredTodos.length}} Tasks</span>
+                <span class="todo-count">{{filteredTodos.length}} customers</span>
                 <ul class="filters">
                     <li>
                         <a style="cursor: pointer" v-on:click="setFilter('all')" v-bind:class="{selected: filterMode === 'all'}">All</a>
@@ -41,8 +42,8 @@
             </footer>
         </section>
         <footer class="info">
-            <p>Double-click to edit a todo</p>
-            <p class="clear-all-items" v-on:click="removeAll()">Click here to remove all items</p>
+            <p>Double-click to edit a customer</p>
+            <p class="clear-all-items" v-on:click="removeAll()">Click here to remove all customers</p>
 
         </footer>
 
